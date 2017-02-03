@@ -69,6 +69,9 @@ class BoundedStream(io.IOBase):
 
     def __next__(self):
         return next(self.stream)
+    
+    def __len__(self):
+        return self.stream_len
 
     next = __next__
 
